@@ -45,8 +45,7 @@ const useMars = () => {
     }=${typeDate === "earth" ? date?.substring(0, 10) : solDate}${
       camera && camera !== "" && `&camera=${camera}`
     }&page=${page}`;
-
-    console.log(uri);
+    
     const accessedData = await nasaDB.get<MarsRoverResponse>(uri);
 
     setMarsStates({
